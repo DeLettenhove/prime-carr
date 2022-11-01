@@ -33,3 +33,29 @@ export const aboutUsContent = [
       'Our philosophy is to accomodate you, the customer, with outstanding service while providing you the highest quality automobile needs at wholesale prices. We have a wide selection of vehicles and the expertise to deal with what you are looking for',
   },
 ]
+
+export const footerInfo = [
+  {
+    id: 0,
+    title: 'Where are we',
+    values: [
+      'Georgia',
+      'Texas',
+      'California',
+      'Virginia',
+      'Colorado',
+      'Pensylvania',
+      'Massachusetts',
+    ],
+  },
+  {
+    id: 1,
+    title: 'Quick links',
+    values: ['About us', 'Our services', 'Contact us'],
+  },
+  {
+    id: 2,
+    title: 'Email us',
+    values: ['contact@primecar.com'],
+  },
+]

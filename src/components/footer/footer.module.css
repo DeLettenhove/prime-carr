@@ -1,0 +1,36 @@
+.box {
+  border-top: 1px solid #fff;
+  margin-top: 50px;
+  padding: 50px 0;
+}
+
+.footerUpper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.infoTitle {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.infoContent {
+  font-size: 12px;
+}
+
+.footerBottom {
+  display: flex;
+  column-gap: 20px;
+}
+
+.copyright {
+  margin-left: auto;
+}
