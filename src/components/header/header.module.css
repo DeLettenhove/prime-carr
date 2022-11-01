@@ -6,18 +6,11 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
+  width: 76px;
 }
 
 .logo:hover {
   cursor: pointer;
-}
-
-.logoImg {
-  width: 32px;
-  height: 32px;
 }
 
 .logoTitle {

@@ -1,7 +1,7 @@
 import styles from './header.module.css'
 
 import { menuItems } from '../../data/mock-data'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.svg'
 
 const Header = () => {
   const menuList = menuItems.map((item) => {
@@ -14,10 +14,7 @@ const Header = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.logo}>
-        <img src={logo} alt="Logo" className={styles.logoImg} />
-        <span className={styles.logoTitle}>prime car</span>
-      </div>
+      <img src={logo} alt="Logo" className={styles.logo} />
       <ul className={styles.menu}>{menuList}</ul>
       <button className="button">Contact Us</button>
     </div>

@@ -1,3 +1,7 @@
+.wrapper {
+  background-color: #000;
+}
+
 .box {
   height: 100vh;
   background-size: cover;
