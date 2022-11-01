@@ -1,25 +1,7 @@
 import styles from './header.module.css'
 
+import { menuItems } from '../../data/mock-data'
 import logo from '../../assets/logo.png'
-
-const menuItems = [
-  {
-    id: 0,
-    value: 'Home',
-  },
-  {
-    id: 1,
-    value: 'About',
-  },
-  {
-    id: 2,
-    value: 'Benefits',
-  },
-  {
-    id: 3,
-    value: 'Cars',
-  },
-]
 
 const Header = () => {
   const menuList = menuItems.map((item) => {
@@ -37,7 +19,7 @@ const Header = () => {
         <span className={styles.logoTitle}>prime car</span>
       </div>
       <ul className={styles.menu}>{menuList}</ul>
-      <button className={styles.button}>Contact Us</button>
+      <button className="button">Contact Us</button>
     </div>
   )
 }
