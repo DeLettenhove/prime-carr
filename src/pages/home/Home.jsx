@@ -1,7 +1,7 @@
-import AboutUs from '../../components/about-us/AboutUs'
-import Footer from '../../components/footer/Footer'
-import Header from '../../components/header/Header'
-import Welcome from '../../components/welcome/Welcome'
+import AboutUs from '../../components/about-us/AboutUs.jsx'
+import Footer from '../../components/footer/Footer.jsx'
+import Header from '../../components/header/Header.jsx'
+import Welcome from '../../components/welcome/Welcome.jsx'
 
 import styles from './home.module.css'
 

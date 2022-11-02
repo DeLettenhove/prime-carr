@@ -8,3 +8,9 @@
   background-repeat: no-repeat;
   background-image: url('../../assets/welcome-bg.jpg');
 }
+
+@media (max-width: 1440px) {
+  .box {
+    background-position: bottom;
+  }
+}

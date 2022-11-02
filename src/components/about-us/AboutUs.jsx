@@ -13,11 +13,11 @@ const aboutUsDescription = aboutUsContent.map((item) => {
 
 const AboutUs = () => {
   return (
-    <div className={styles.box}>
+    <div id='about-us' className={styles.box}>
       <h2 className={styles.title}>About us</h2>
       <div className={styles.aboutWrapper}>
         <div className={styles.aboutContent}>{aboutUsDescription}</div>
-        <img src={aboutImg} alt="Sport car" className={styles.aboutImg} />
+        <div><img src={aboutImg} alt="Sport car" className={styles.aboutImg} /></div>
       </div>
     </div>
   )

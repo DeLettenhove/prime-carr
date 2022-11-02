@@ -13,6 +13,7 @@
 
 .aboutWrapper {
   display: flex;
+  align-items: center;
   column-gap: 50px;
 }
 
@@ -20,8 +21,49 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  row-gap: 10px;
+  flex-basis: fit-content;
 }
 
 .aboutImg {
-  max-width: 500px;
+  flex-basis: fit-content;
+  max-width: 100%;
+}
+
+@media (max-width: 950px) {
+  .aboutWrapper {
+    flex-direction: column-reverse;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 425px) {
+  .box {
+    row-gap: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .aboutWrapper {
+    flex-direction: column-reverse;
+    row-gap: 20px;
+  }
+
+  .aboutContent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 32px;
+  }
 }

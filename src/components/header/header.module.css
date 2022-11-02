@@ -6,16 +6,11 @@
 }
 
 .logo {
-  width: 76px;
+  max-width: 76px;
 }
 
 .logo:hover {
   cursor: pointer;
-}
-
-.logoTitle {
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 .menu {
@@ -27,7 +22,65 @@
   list-style: none;
 }
 
-.menuItem:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.callImg {
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width: 1440px) {
+  .logo {
+    max-width: 100px;
+  }
+
+  .menu {
+    column-gap: 60px;
+  }
+
+  .menuItem {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    column-gap: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .logo {
+    max-width: 60px;
+  }
+
+  .menu {
+    column-gap: 15px;
+  }
+
+  .menuItem {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .contactBtn {
+    display: none;
+  }
+
+  .callImg {
+    display: block;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: space-between;
+    order: 1;
+    margin-top: 10px;
+  }
 }

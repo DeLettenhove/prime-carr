@@ -9,20 +9,24 @@ const Footer = () => {
     <div className={styles.box}>
       <div className={styles.footerUpper}>
         <img src={logo} alt="" />
+       <div className={styles.infoWrapper}> 
         {footerInfo.map((item) => {
           return (
             <div key={item.id} className={styles.infoBox}>
               <p className={styles.infoTitle}>{item.title}</p>
-              {item.values.map((item, i) => {
+              <div className={styles.linksList}>
+              {item.values.map((item) => {
                 return (
-                  <p key={i} className={styles.infoContent}>
-                    {item}
-                  </p>
+                  <a href='/' key={item.id} className={styles.infoLinks}>
+                    {item.value}
+                  </a>
                 )
               })}
+              </div>
             </div>
           )
         })}
+        </div>
       </div>
       <div className={styles.footerBottom}>
         <p>Privacy policy</p>

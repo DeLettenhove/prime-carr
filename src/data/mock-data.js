@@ -34,28 +34,89 @@ export const aboutUsContent = [
   },
 ]
 
+const whereWeAre = [
+  {
+    id: 0,
+    value: 'Georgia',
+  },
+  {
+    id: 1,
+    value: 'Texas',
+  },
+  {
+    id: 2,
+    value: 'Massachusetts',
+  },
+  {
+    id: 3,
+    value: 'Virginia',
+  },
+  {
+    id: 4,
+    value: 'Pensylvania',
+  },
+  {
+    id: 5,
+    value: 'California',
+  },
+  {
+    id: 6,
+    value: 'Colorado',
+  },
+]
+
+const quickLinks = [
+  {
+    id: 0,
+    value: 'About us',
+  },
+  {
+    id: 1,
+    value: 'Our services',
+  },
+  {
+    id: 2,
+    value: 'Contact us',
+  },
+]
+
+const emailUs = [
+  {
+    id: 0,
+    value: 'contact@primecar.com',
+  },
+]
+
+const callUs = [
+  {
+    id: 2,
+    value: '+999-999-999',
+  },
+  {
+    id: 1,
+    value: '+111-111-111',
+  },
+]
+
 export const footerInfo = [
   {
     id: 0,
     title: 'Where are we',
-    values: [
-      'Georgia',
-      'Texas',
-      'California',
-      'Virginia',
-      'Colorado',
-      'Pensylvania',
-      'Massachusetts',
-    ],
+    values: whereWeAre,
   },
   {
     id: 1,
     title: 'Quick links',
-    values: ['About us', 'Our services', 'Contact us'],
+    values: quickLinks,
   },
   {
     id: 2,
     title: 'Email us',
-    values: ['contact@primecar.com'],
+    values: emailUs,
+  },
+  {
+    id: 3,
+    title: 'Call us',
+    values: callUs,
   },
 ]

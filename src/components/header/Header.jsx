@@ -1,3 +1,5 @@
+import {TbPhoneCall} from 'react-icons/tb'
+
 import styles from './header.module.css'
 
 import { menuItems } from '../../data/mock-data'
@@ -7,7 +9,7 @@ const Header = () => {
   const menuList = menuItems.map((item) => {
     return (
       <li key={item.id} className={styles.menuItem}>
-        {item.value}
+        <a href="/" className={styles.menuLimks}>{item.value}</a>
       </li>
     )
   })
@@ -16,7 +18,8 @@ const Header = () => {
     <div className={styles.wrapper}>
       <img src={logo} alt="Logo" className={styles.logo} />
       <ul className={styles.menu}>{menuList}</ul>
-      <button className="button">Contact Us</button>
+      <button className={`${styles.contactBtn} button`}>Contact Us</button>
+      <TbPhoneCall className={styles.callImg} />
     </div>
   )
 }

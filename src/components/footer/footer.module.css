@@ -1,14 +1,20 @@
 .box {
   border-top: 1px solid #fff;
   margin-top: 50px;
-  padding: 50px 0;
+  padding: 50px 10px;
 }
 
 .footerUpper {
   display: flex;
-  justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
+  column-gap: 50px;
   margin-bottom: 30px;
+}
+
+.infoWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .infoBox {
@@ -22,7 +28,13 @@
   text-transform: capitalize;
 }
 
-.infoContent {
+.linksList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.infoLinks {
   font-size: 12px;
 }
 
@@ -33,4 +45,38 @@
 
 .copyright {
   margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .infoWrapper {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .linksList {
+    flex-direction: row;
+    column-gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .footerBottom {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footerUpper {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .footerBottom {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footerBottom {
+    font-size: 10px;
+  }
 }
