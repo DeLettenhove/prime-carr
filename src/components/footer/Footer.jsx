@@ -8,7 +8,9 @@ const Footer = () => {
   return (
     <div className={styles.box}>
       <div className={styles.footerUpper}>
-        <img src={logo} alt="" />
+        <a href='/'>
+          <img src={logo} alt="" />
+        </a>
        <div className={styles.infoWrapper}> 
         {footerInfo.map((item) => {
           return (
@@ -29,11 +31,11 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <p>Privacy policy</p>
-        <p>Terms and conditions</p>
-        <p className={styles.copyright}>
+        <a href='/'>Privacy policy</a>
+        <a href='/'>Terms and conditions</a>
+        <a href='/' className={styles.copyright}>
           Copyright © 2022 Prime Car. All Rights Reserved
-        </p>
+        </a>
       </div>
     </div>
   )

@@ -2,18 +2,22 @@ export const menuItems = [
   {
     id: 0,
     value: 'Home',
+    link: '/',
   },
   {
     id: 1,
     value: 'About',
+    link: '/about',
   },
   {
     id: 2,
     value: 'Benefits',
+    link: '/benefits',
   },
   {
     id: 3,
     value: 'Cars',
+    link: '/cars',
   },
 ]
 

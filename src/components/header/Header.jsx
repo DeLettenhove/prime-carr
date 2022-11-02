@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {TbPhoneCall} from 'react-icons/tb'
 
 import styles from './header.module.css'
@@ -9,7 +10,7 @@ const Header = () => {
   const menuList = menuItems.map((item) => {
     return (
       <li key={item.id} className={styles.menuItem}>
-        <a href="/" className={styles.menuLimks}>{item.value}</a>
+        <Link to={item.link} className={styles.menuLimks}>{item.value}</Link>
       </li>
     )
   })

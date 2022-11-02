@@ -1,7 +1,16 @@
+import { Routes, Route } from 'react-router-dom'
+
 import Home from './pages/home/Home'
 
 function App() {
-  return <Home />
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/cars" element={<h1>Cars page!</h1>} />
+      <Route path="/cars/:id" element={<h1>Chosen car!!!</h1>} />
+      <Route path="*" element={<h1>Not Found!!!</h1>} />
+    </Routes>
+  )
 }
 
 export default App
