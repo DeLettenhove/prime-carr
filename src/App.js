@@ -2,15 +2,18 @@ import { Routes, Route } from 'react-router-dom'
 
 import Home from './pages/home/Home'
 import Cars from './pages/cars/Cars'
+import Constructor from './pages/constructor/Constructor'
 
 function App() {
   return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cars" element={<Cars />} />
-        <Route path="/cars/:id" element={<h1>Chosen car!!!</h1>} />
-        <Route path="*" element={<h1>Not Found!!!</h1>} />
-      </Routes>
+    <Routes location="/constructor">
+      <Route path="/" element={<Home />} />
+      <Route path="/cars" element={<Cars />} />
+      {/* <Route path="/cars/:id" element={<Constructor />} /> */}
+
+      <Route path="/constructor" element={<Constructor />} />
+      <Route path="*" element={<h1>Not Found!!!</h1>} />
+    </Routes>
   )
 }
 

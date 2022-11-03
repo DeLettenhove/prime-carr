@@ -10,7 +10,9 @@ const Catalog = () => {
       {
         carsCatalog.map((item) => {
           return (
-            <Card 
+            <Card  
+            key={item.id}            
+            id={item.id}
             name={item.name} 
             variant={item.variant} 
             img={item.img} 

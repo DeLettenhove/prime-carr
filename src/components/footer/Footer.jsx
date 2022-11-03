@@ -7,7 +7,7 @@ import { footerInfo } from '../../data/mock-data'
 const Footer = () => {
   return (
     <div className={styles.box}>
-      <div className={styles.footerUpper}>
+      <div className={styles.footerTop}>
         <a href='/'>
           <img className={styles.footerLogo} src={logo} alt="" />
         </a>
@@ -30,7 +30,7 @@ const Footer = () => {
         })}
         </div>
       </div>
-      <div className={styles.footerBottom}>
+      <div className={styles.footerBot}>
         <a href='/'>Privacy policy</a>
         <a href='/'>Terms and conditions</a>
         <a href='/' className={styles.copyright}>

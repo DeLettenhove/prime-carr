@@ -2,14 +2,15 @@ import styles from './card.module.css'
 
 import personIcon from "../../assets/person.svg"
 import transmissionIcon from "../../assets/transmission.svg"
+import { Link } from 'react-router-dom'
 
-const Card = ({name, variant, img, places, transmssion, price}) => {
+const Card = ({id, name, variant, img, places, transmssion, price}) => {
   return (
-      <div className={styles.card}>
+      <Link to={`/cars/${id}`} className={styles.card}>
         <h4 className={styles.cardTitle}>{name}</h4>
         <p className={styles.cardVariant}>{variant}</p>
         <div className={styles.cardImgWrapper}>
-          <img className={styles.cardImg} src={img} alt="Car image" />
+          <img className={styles.cardImg} src={img} alt="Car" />
         </div>
         <div className={styles.cardInfoWrapper}>
           <div className={styles.cardInfoBox}>
@@ -22,7 +23,7 @@ const Card = ({name, variant, img, places, transmssion, price}) => {
           </div>
           <p className={styles.cardPrice}>{price}</p>
         </div>
-      </div>  
+      </Link>  
   )
 }
 

@@ -1,0 +1,15 @@
+.colors {
+  display: flex;
+  column-gap: 10px;
+}
+
+.color {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.color:checked {
+  border: 2px solid white;
+}

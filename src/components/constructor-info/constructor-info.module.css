@@ -1,0 +1,32 @@
+.wrapper {
+  flex-basis: 50%;
+}
+
+.img {
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.box {
+  padding: 0 20px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.itemTitle {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.item {
+  text-transform: capitalize;
+}
