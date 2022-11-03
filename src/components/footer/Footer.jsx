@@ -9,7 +9,7 @@ const Footer = () => {
     <div className={styles.box}>
       <div className={styles.footerUpper}>
         <a href='/'>
-          <img src={logo} alt="" />
+          <img className={styles.footerLogo} src={logo} alt="" />
         </a>
        <div className={styles.infoWrapper}> 
         {footerInfo.map((item) => {
