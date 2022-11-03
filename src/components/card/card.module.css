@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #252525;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+}
+
+.cardTitle {
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.cardVariant {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.cardImg {
+  object-fit: contain;
+  padding: 20px 0;
+}
+
+.cardInfoWrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.cardInfoBox {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.cardInfoIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.cardPrice {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
