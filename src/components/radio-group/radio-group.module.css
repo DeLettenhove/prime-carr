@@ -57,3 +57,35 @@
 .color:checked {
   border: 2px solid white;
 }
+
+@media (max-width: 768px) {
+  .title,
+  .item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  .title {
+    max-width: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .color {
+    width: 15px;
+    height: 15px;
+  }
+
+  .radio {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .title,
+  .item {
+    font-size: 12px;
+  }
+}

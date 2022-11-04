@@ -14,3 +14,22 @@
   margin-right: 30px;
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .constructor {
+    column-gap: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .constructor {
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .constructor {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+}

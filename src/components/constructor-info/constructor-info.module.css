@@ -1,5 +1,5 @@
 .wrapper {
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 
 .img {
@@ -29,4 +29,39 @@
 
 .item {
   text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    flex-basis: fill;
+    padding-bottom: 15px;
+  }
+
+  .box {
+    padding: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .img {
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .item {
+    font-size: 12px;
+  }
 }
