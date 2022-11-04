@@ -202,56 +202,65 @@ export const carsCatalog = [
   },
 ]
 
-export const colorList = [
-  {
-    id: 0,
-    value: 'black',
-    cost: 25,
-  },
-  {
-    id: 1,
-    value: 'red',
-    cost: 35,
-  },
-  {
-    id: 2,
-    value: 'purple',
-    cost: 50,
-  },
-]
+export const colorData = {
+  title: 'colors',
+  values: [
+    {
+      id: 0,
+      value: 'black',
+      cost: 25,
+    },
+    {
+      id: 1,
+      value: 'red',
+      cost: 35,
+    },
+    {
+      id: 2,
+      value: 'purple',
+      cost: 50,
+    },
+  ],
+}
 
-export const engineList = [
-  {
-    id: 0,
-    value: '4-Cyl 1.5 Liter',
-    cost: 100,
-  },
-  {
-    id: 1,
-    value: '8-Cyl 3 Liter',
-    cost: 200,
-  },
-  {
-    id: 2,
-    value: '16-Cyl 6 Liter',
-    cost: 300,
-  },
-]
+export const engineData = {
+  title: 'engines',
+  values: [
+    {
+      id: 0,
+      value: '4-Cyl 1.5 Liter',
+      cost: 100,
+    },
+    {
+      id: 1,
+      value: '8-Cyl 3 Liter',
+      cost: 200,
+    },
+    {
+      id: 2,
+      value: '16-Cyl 6 Liter',
+      cost: 300,
+    },
+  ],
+}
 
-export const interiorList = [
-  {
-    id: 0,
-    value: 'leather',
-    cost: 75,
-  },
-  {
-    id: 1,
-    value: 'suede',
-    cost: 50,
-  },
-  {
-    id: 2,
-    value: 'leatherette',
-    cost: 15,
-  },
-]
+export const interiorData = {
+  title: 'interiors',
+  values: [
+    {
+      id: 0,
+      value: 'leather',
+      cost: 75,
+    },
+    {
+      id: 1,
+      value: 'suede',
+      cost: 50,
+    },
+    {
+      id: 2,
+      value: 'leatherette',
+      cost: 15,
+    },
+  ],
+}

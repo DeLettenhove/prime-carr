@@ -43,20 +43,25 @@ const Contructor = () => {
     setModel((prevState) => ({ ...prevState, color }))
   }
 
-  // const onChangeEngine = () => {
-  //   setModel((prevState) => ({ ...prevState, engine }))
-  // }
+  const onChangeEngine = (engine) => {
+    setModel((prevState) => ({ ...prevState, engine }))
+  }
 
-  // const onChangeInterior = () => {
-  //   setModel((prevState) => ({ ...prevState, interior }))
-  // }
+  const onChangeInterior = (interior) => {
+    setModel((prevState) => ({ ...prevState, interior }))
+  }
 
   return (
     <div className="container">
       <Header />
       <div className={styles.constructor}>
         <ConstructorInfo model={model} />
-        <ConstructorOptions model={model} onChangeColor={onChangeColor} />
+        <ConstructorOptions
+          model={model}
+          onChangeColor={onChangeColor}
+          oneChangeEngine={onChangeEngine}
+          onChangeInterior={onChangeInterior}
+        />
       </div>
       {/* <p className={styles.price}>
         <span className={styles.item}>Price:</span>$

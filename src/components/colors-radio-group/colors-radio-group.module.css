@@ -3,6 +3,14 @@
   column-gap: 10px;
 }
 
+.title {
+  text-transform: capitalize;
+}
+
+.title::after {
+  content: ':';
+}
+
 .color {
   appearance: none;
   width: 20px;
