@@ -8,47 +8,29 @@ import ConstructorOptions from '../../components/constructor-options/Constructor
 import { carsCatalog } from '../../data/mock-data'
 import styles from './constructor.module.css'
 
-import img from '../../assets/porshe.png'
-
-const carModel = {
-  id: 0,
-  name: 'Porsche 718 Cayman S',
-  variant: 'Coupe',
-  img: img,
-  transmssion: 'Manual',
-  places: 2,
-  price: 400,
-  color: 'black',
-  engine: '4-Cyl 1.5 Liter',
-  interior: 'leather',
-}
-
 const Contructor = () => {
-  // const { id } = useParams()
-  // const [model, setModel] = useState({})
-  const [totalPrice, setTotalPrice] = useState(null)
+  const { id } = useParams()
+  const [model, setModel] = useState({})
 
-  // const getModel = (id) => {
-  //   const car = carsCatalog.find((car) => car.id === parseInt(id))
-  //   setModel(car)
-  // }
-
-  // useEffect(() => {
-  //   getModel(id)
-  // }, [id])
-
-  const [model, setModel] = useState(carModel)
-
-  const onChangeColor = (color) => {
-    setModel((prevState) => ({ ...prevState, color }))
+  const getModel = (id) => {
+    const car = carsCatalog.find((car) => car.id === parseInt(id))
+    setModel(car)
   }
 
-  const onChangeEngine = (engine) => {
-    setModel((prevState) => ({ ...prevState, engine }))
+  useEffect(() => {
+    getModel(id)
+  }, [id])
+
+  const onChangeColor = (e) => {
+    setModel((prevState) => ({ ...prevState, color: e.target.value }))
   }
 
-  const onChangeInterior = (interior) => {
-    setModel((prevState) => ({ ...prevState, interior }))
+  const onChangeEngine = (e) => {
+    setModel((prevState) => ({ ...prevState, engine: e.target.value }))
+  }
+
+  const onChangeInterior = (e) => {
+    setModel((prevState) => ({ ...prevState, interior: e.target.value }))
   }
 
   return (
@@ -63,10 +45,6 @@ const Contructor = () => {
           onChangeInterior={onChangeInterior}
         />
       </div>
-      {/* <p className={styles.price}>
-        <span className={styles.item}>Price:</span>$
-        {model.price}
-      </p> */}
     </div>
   )
 }

@@ -1,11 +1,9 @@
 import styles from './constructor-info.module.css'
 
-import coolCar from '../../assets/cool-car.png'
-
 const ConstructorInfo = ({ model }) => {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.img} src={coolCar} alt="Car" />
+      <img className={styles.img} src={model.img} alt="Car" />
       <div className={styles.box}>
         <h3 className={styles.title}>{model.name}</h3>
         <div className={styles.items}>
