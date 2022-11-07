@@ -138,7 +138,7 @@ export const carsCatalog = [
     transmssion: 'Manual',
     places: 2,
     price: 1700,
-    color: 'black',
+    color: { value: 'black', cost: 100 },
     engine: '4-Cyl 1.5 Liter',
     interior: 'leather',
   },
@@ -150,7 +150,7 @@ export const carsCatalog = [
     transmssion: 'Matic',
     places: 4,
     price: 1400,
-    color: 'red',
+    color: { value: 'red', cost: 200 },
     engine: '4-Cyl 1.5 Liter',
     interior: 'leatherette',
   },
@@ -162,7 +162,7 @@ export const carsCatalog = [
     transmssion: 'Manual',
     places: 2,
     price: 2100,
-    color: 'red',
+    color: { value: 'red', cost: 200 },
     engine: '16-Cyl 6 Liter',
     interior: 'leather',
   },
@@ -174,7 +174,7 @@ export const carsCatalog = [
     transmssion: 'Manual',
     places: 2,
     price: 2200,
-    color: 'purple',
+    color: { value: 'purple', cost: 300 },
     engine: '8-Cyl 3 Liter',
     interior: 'suede',
   },
@@ -186,7 +186,7 @@ export const carsCatalog = [
     transmssion: 'Manual',
     places: 4,
     price: 2700,
-    color: 'purple',
+    color: { value: 'purple', cost: 300 },
     engine: '16-Cyl 6 Liter',
     interior: 'leather',
   },
@@ -198,14 +198,14 @@ export const carsCatalog = [
     transmssion: 'Matic',
     places: 2,
     price: 1900,
-    color: 'black',
+    color: { value: 'black', cost: 100 },
     engine: '4-Cyl 1.5 Liter',
     interior: 'suede',
   },
 ]
 
 export const colorData = {
-  title: 'colors',
+  title: 'color',
   values: [
     {
       id: 0,
@@ -226,7 +226,7 @@ export const colorData = {
 }
 
 export const engineData = {
-  title: 'engines',
+  title: 'engine',
   values: [
     {
       id: 0,
@@ -247,7 +247,7 @@ export const engineData = {
 }
 
 export const interiorData = {
-  title: 'interiors',
+  title: 'interior',
   values: [
     {
       id: 0,

@@ -1,0 +1,22 @@
+.title {
+  padding-left: 30px;
+}
+
+.box {
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #202020;
+  border-radius: 20px;
+}
+
+.items {
+  list-style: none;
+}
+
+.item {
+  text-transform: capitalize;
+}
+
+.itemTitle::after {
+  content: ': +$';
+}

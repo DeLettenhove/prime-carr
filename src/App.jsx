@@ -6,6 +6,7 @@ import Constructor from './pages/constructor/Constructor'
 
 function App() {
   return (
+    // <Routes location="/cars/1">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/cars" element={<Cars />} />
