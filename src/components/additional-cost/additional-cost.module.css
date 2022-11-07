@@ -13,10 +13,36 @@
   list-style: none;
 }
 
-.item {
-  text-transform: capitalize;
+.itemTitle::after {
+  content: ': $';
 }
 
-.itemTitle::after {
-  content: ': +$';
+@media (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .items {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    padding-left: 10px;
+  }
+
+  .box {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 14px;
+  }
+
+  .items {
+    font-size: 12px;
+  }
 }

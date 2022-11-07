@@ -8,6 +8,14 @@
   border-radius: 30px;
 }
 
+.additional {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  row-gap: 20px;
+  border-left: 1px solid #fff;
+}
+
 .price {
   display: flex;
   justify-content: flex-end;
@@ -31,5 +39,16 @@
   .constructor {
     flex-direction: column;
     padding: 20px 30px;
+  }
+
+  .additional {
+    border-left: none;
+    border-top: 1px solid #fff;
+  }
+}
+
+@media (max-width: 425px) {
+  .additional {
+    row-gap: 10px;
   }
 }

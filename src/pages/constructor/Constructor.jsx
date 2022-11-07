@@ -13,41 +13,50 @@ import styles from './constructor.module.css'
 const Contructor = () => {
   const { id } = useParams()
   const [model, setModel] = useState({})
-  const [additionalItems, setAdditionalItems] = useState([])
+  const [defaultOptions, setDefaultOptions] = useState({})
+  const [newColor, setNewColor] = useState('')
+  const [newEngine, setNewEngine] = useState('')
+  const [newInterior, setNewInterior] = useState('')
 
   const getModel = (id) => {
     const car = carsCatalog.find((car) => car.id === parseInt(id))
+    const { color, engine, interior } = car
     setModel(car)
+    setDefaultOptions({ color, engine, interior })
   }
-
-  // const getAdditionalItems = () => {
-  //   const items = []
-  //   items.push(colorData.values.find((item) => item.value === model.color))
-  //   items.push(engineData.values.find((item) => item.value === model.engine))
-  //   items.push(
-  //     interiorData.values.find((item) => item.value === model.interior)
-  //   )
-  //   setAdditionalItems(items)
-  // }
 
   useEffect(() => {
     getModel(id)
   }, [id])
 
-  // useEffect(() => {
-  //   getAdditionalItems()
-  // }, [model.color, model.engine, model.interior])
-
   const onChangeColor = (e) => {
-    setModel((prevState) => ({ ...prevState, color: e.target.value }))
+    const value = e.target.value
+    setModel((prevState) => ({ ...prevState, color: value }))
+    if (value !== defaultOptions.color) {
+      setNewColor({ title: 'Repaint', cost: e.target.dataset.cost })
+    } else {
+      setNewColor('')
+    }
   }
 
   const onChangeEngine = (e) => {
-    setModel((prevState) => ({ ...prevState, engine: e.target.value }))
+    const value = e.target.value
+    setModel((prevState) => ({ ...prevState, engine: value }))
+    if (value !== defaultOptions.engine) {
+      setNewEngine({ title: 'Change engine', cost: e.target.dataset.cost })
+    } else {
+      setNewEngine('')
+    }
   }
 
   const onChangeInterior = (e) => {
-    setModel((prevState) => ({ ...prevState, interior: e.target.value }))
+    const value = e.target.value
+    setModel((prevState) => ({ ...prevState, interior: value }))
+    if (value !== defaultOptions.interior) {
+      setNewInterior({ title: 'Change interior', cost: e.target.dataset.cost })
+    } else {
+      setNewInterior('')
+    }
   }
 
   return (
@@ -55,14 +64,22 @@ const Contructor = () => {
       <Header />
       <div className={styles.constructor}>
         <ConstructorInfo model={model} />
-        <ConstructorOptions
-          model={model}
-          onChangeColor={onChangeColor}
-          oneChangeEngine={onChangeEngine}
-          onChangeInterior={onChangeInterior}
-        />
+        <div className={styles.additional}>
+          <ConstructorOptions
+            model={model}
+            onChangeColor={onChangeColor}
+            oneChangeEngine={onChangeEngine}
+            onChangeInterior={onChangeInterior}
+          />
+          {(newColor || newEngine || newInterior) && (
+            <AdditionalCost
+              color={newColor}
+              engine={newEngine}
+              interior={newInterior}
+            />
+          )}
+        </div>
       </div>
-      <AdditionalCost list={additionalItems} />
     </div>
   )
 }

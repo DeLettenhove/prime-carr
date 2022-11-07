@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  border-left: 1px solid #fff;
-  flex-basis: 40%;
 }
 
 .options {
@@ -18,10 +16,6 @@
 }
 
 @media (max-width: 768px) {
-  .wrapper {
-    padding-left: 15px;
-  }
-
   .title {
     font-size: 16px;
   }
@@ -33,6 +27,10 @@
     padding-top: 15px;
     border-left: none;
     border-top: 1px solid #fff;
+  }
+
+  .options {
+    padding-left: 10px;
   }
 
   .title {

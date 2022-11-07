@@ -1,5 +1,4 @@
 import RadioGroup from '../radio-group/RadioGroup'
-import AdditionalCost from '../additional-cost/AdditionalCost'
 
 import styles from './constructor-options.module.css'
 import { colorData, engineData, interiorData } from '../../data/mock-data'
@@ -35,7 +34,6 @@ const ConstructorOptions = ({
           isColors={false}
         />
       </div>
-      {/* <AdditionalCost currentOptions={{ color, engine, interior }} /> */}
     </div>
   )
 }

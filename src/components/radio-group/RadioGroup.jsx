@@ -17,6 +17,7 @@ const RadioGroup = ({ current, data, changeHandler, isColors }) => {
                   type="radio"
                   name={data.title}
                   value={item.value}
+                  data-cost={item.cost}
                   checked={item.value === current}
                   onChange={changeHandler}
                 />
