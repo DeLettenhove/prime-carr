@@ -41,26 +41,7 @@ const Contructor = () => {
     setDefaultOptions({ color, engine, interior })
     dispatchExtra({
       type: 'GET_DEFAULT',
-      payload: {
-        color: {
-          id: Date.now(),
-          title: 'Repaint',
-          cost: color.cost,
-          isDefault: true,
-        },
-        engine: {
-          id: Date.now(),
-          title: 'Change engine',
-          cost: engine.cost,
-          isDefault: true,
-        },
-        interior: {
-          id: Date.now(),
-          title: 'Change interior',
-          cost: interior.cost,
-          isDefault: true,
-        },
-      },
+      payload: { color, engine, interior },
     })
   }
 
@@ -76,7 +57,8 @@ const Contructor = () => {
       type: 'REPAINT',
       payload: {
         id: Date.now(),
-        title: 'Repaint',
+        action: 'Repaint',
+        title: value,
         cost: e.target.dataset.cost,
         isDefault,
       },
@@ -96,7 +78,8 @@ const Contructor = () => {
       type: 'CHANGE_ENGINE',
       payload: {
         id: Date.now(),
-        title: 'Change engine',
+        action: 'Change engine',
+        title: value,
         cost: e.target.dataset.cost,
         isDefault,
       },
@@ -116,7 +99,8 @@ const Contructor = () => {
       type: 'CHANGE_INTERIOR',
       payload: {
         id: Date.now(),
-        title: 'Change interior',
+        action: 'Change interior',
+        title: value,
         cost: e.target.dataset.cost,
         isDefault,
       },
@@ -127,6 +111,16 @@ const Contructor = () => {
       interior: { ...prevState.interior, title: value },
     }))
   }
+
+  const resetHandler = () => {
+    setModel((prev) => ({ ...prev, ...defaultOptions }))
+    dispatchExtra({
+      type: 'GET_DEFAULT',
+      payload: { ...defaultOptions },
+    })
+  }
+
+  console.log(extraOptions)
 
   return (
     <div className="container">
@@ -140,7 +134,11 @@ const Contructor = () => {
             oneChangeEngine={onChangeEngine}
             onChangeInterior={onChangeInterior}
           />
-          <AdditionalCost extra={extraOptions} basePrice={model.basePrice} />
+          <AdditionalCost
+            extra={extraOptions}
+            basePrice={model.basePrice}
+            reset={resetHandler}
+          />
         </div>
       </div>
     </div>

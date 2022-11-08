@@ -1,10 +1,12 @@
+import { GiCancel } from 'react-icons/gi'
+
 import styles from './additional-cost.module.css'
 
 const isVisible = (arr) => {
   return Boolean(arr.length)
 }
 
-const AdditionalCost = ({ extra, basePrice }) => {
+const AdditionalCost = ({ extra, basePrice, reset }) => {
   const extraCosts = Object.values(extra)
   const filteredCosts = extraCosts.filter((item) => !item.isDefault)
 
@@ -27,12 +29,13 @@ const AdditionalCost = ({ extra, basePrice }) => {
               {filteredCosts.map((item) => {
                 return (
                   <li key={item.id} className={styles.item}>
-                    <span className={styles.itemTitle}>{item.title}</span>
+                    <span className={styles.itemTitle}>{item.action}</span>
                     {item.cost}
                   </li>
                 )
               })}
             </ul>
+            <GiCancel onClick={reset} className={styles.reset} />
           </div>
         </>
       )}
