@@ -9,15 +9,15 @@ const ConstructorInfo = ({ model }) => {
         <div className={styles.items}>
           <p className={styles.item}>
             <span className={styles.itemTitle}>Color:</span>
-            {model.color}
+            {model.color?.title}
           </p>
           <p className={styles.item}>
             <span className={styles.itemTitle}>Engine:</span>
-            {model.engine}
+            {model.engine?.title}
           </p>
           <p className={styles.item}>
             <span className={styles.itemTitle}>Interior:</span>
-            {model.interior}
+            {model.interior?.title}
           </p>
         </div>
       </div>

@@ -17,8 +17,15 @@
   content: ': $';
 }
 
+.price {
+  margin-top: 20px;
+  margin-left: auto;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
-  .title {
+  .title,
+  .price {
     font-size: 16px;
   }
 
@@ -38,7 +45,8 @@
 }
 
 @media (max-width: 425px) {
-  .title {
+  .title,
+  .price {
     font-size: 14px;
   }
 

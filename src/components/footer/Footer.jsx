@@ -3,39 +3,40 @@ import styles from './footer.module.css'
 import logo from '../../assets/logo.svg'
 
 import { footerInfo } from '../../data/mock-data'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <div className={styles.box}>
       <div className={styles.footerTop}>
-        <a href='/'>
+        <Link to="/">
           <img className={styles.footerLogo} src={logo} alt="" />
-        </a>
-       <div className={styles.infoWrapper}> 
-        {footerInfo.map((item) => {
-          return (
-            <div key={item.id} className={styles.infoBox}>
-              <p className={styles.infoTitle}>{item.title}</p>
-              <div className={styles.linksList}>
-              {item.values.map((item) => {
-                return (
-                  <a href='/' key={item.id} className={styles.infoLinks}>
-                    {item.value}
-                  </a>
-                )
-              })}
+        </Link>
+        <div className={styles.infoWrapper}>
+          {footerInfo.map((item) => {
+            return (
+              <div key={item.id} className={styles.infoBox}>
+                <p className={styles.infoTitle}>{item.title}</p>
+                <div className={styles.linksList}>
+                  {item.values.map((item) => {
+                    return (
+                      <Link to="/" key={item.id} className={styles.infoLinks}>
+                        {item.value}
+                      </Link>
+                    )
+                  })}
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
         </div>
       </div>
       <div className={styles.footerBot}>
-        <a href='/'>Privacy policy</a>
-        <a href='/'>Terms and conditions</a>
-        <a href='/' className={styles.copyright}>
+        <Link to="/">Privacy policy</Link>
+        <Link to="/">Terms and conditions</Link>
+        <Link to="/" className={styles.copyright}>
           Copyright © 2022 Prime Car. All Rights Reserved
-        </a>
+        </Link>
       </div>
     </div>
   )

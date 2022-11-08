@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useReducer } from 'react'
 import { useParams } from 'react-router-dom'
 
 import Header from '../../components/header/Header'
@@ -7,22 +7,61 @@ import ConstructorOptions from '../../components/constructor-options/Constructor
 import AdditionalCost from '../../components/additional-cost/AdditionalCost'
 
 import { carsCatalog } from '../../data/mock-data'
-import { colorData, engineData, interiorData } from '../../data/mock-data'
 import styles from './constructor.module.css'
+
+const extraReducer = (state, action) => {
+  switch (action.type) {
+    case 'REPAINT':
+      return { ...state, color: action.payload }
+
+    case 'CHANGE_ENGINE':
+      return { ...state, engine: action.payload }
+
+    case 'CHANGE_INTERIOR':
+      return { ...state, interior: action.payload }
+
+    case 'GET_DEFAULT': {
+      return action.payload
+    }
+    default:
+      return state
+  }
+}
 
 const Contructor = () => {
   const { id } = useParams()
   const [model, setModel] = useState({})
   const [defaultOptions, setDefaultOptions] = useState({})
-  const [newColor, setNewColor] = useState('')
-  const [newEngine, setNewEngine] = useState('')
-  const [newInterior, setNewInterior] = useState('')
+  const [extraOptions, dispatchExtra] = useReducer(extraReducer, {})
 
   const getModel = (id) => {
     const car = carsCatalog.find((car) => car.id === parseInt(id))
     const { color, engine, interior } = car
     setModel(car)
     setDefaultOptions({ color, engine, interior })
+    dispatchExtra({
+      type: 'GET_DEFAULT',
+      payload: {
+        color: {
+          id: Date.now(),
+          title: 'Repaint',
+          cost: color.cost,
+          isDefault: true,
+        },
+        engine: {
+          id: Date.now(),
+          title: 'Change engine',
+          cost: engine.cost,
+          isDefault: true,
+        },
+        interior: {
+          id: Date.now(),
+          title: 'Change interior',
+          cost: interior.cost,
+          isDefault: true,
+        },
+      },
+    })
   }
 
   useEffect(() => {
@@ -31,32 +70,62 @@ const Contructor = () => {
 
   const onChangeColor = (e) => {
     const value = e.target.value
-    setModel((prevState) => ({ ...prevState, color: value }))
-    if (value !== defaultOptions.color) {
-      setNewColor({ title: 'Repaint', cost: e.target.dataset.cost })
-    } else {
-      setNewColor('')
-    }
+    const isDefault = value === defaultOptions.color.title
+
+    dispatchExtra({
+      type: 'REPAINT',
+      payload: {
+        id: Date.now(),
+        title: 'Repaint',
+        cost: e.target.dataset.cost,
+        isDefault,
+      },
+    })
+
+    setModel((prevState) => ({
+      ...prevState,
+      color: { ...prevState.color, title: value },
+    }))
   }
 
   const onChangeEngine = (e) => {
     const value = e.target.value
-    setModel((prevState) => ({ ...prevState, engine: value }))
-    if (value !== defaultOptions.engine) {
-      setNewEngine({ title: 'Change engine', cost: e.target.dataset.cost })
-    } else {
-      setNewEngine('')
-    }
+    const isDefault = value === defaultOptions.engine.title
+
+    dispatchExtra({
+      type: 'CHANGE_ENGINE',
+      payload: {
+        id: Date.now(),
+        title: 'Change engine',
+        cost: e.target.dataset.cost,
+        isDefault,
+      },
+    })
+
+    setModel((prevState) => ({
+      ...prevState,
+      engine: { ...prevState.engine, title: value },
+    }))
   }
 
   const onChangeInterior = (e) => {
     const value = e.target.value
-    setModel((prevState) => ({ ...prevState, interior: value }))
-    if (value !== defaultOptions.interior) {
-      setNewInterior({ title: 'Change interior', cost: e.target.dataset.cost })
-    } else {
-      setNewInterior('')
-    }
+    const isDefault = value === defaultOptions.interior.title
+
+    dispatchExtra({
+      type: 'CHANGE_INTERIOR',
+      payload: {
+        id: Date.now(),
+        title: 'Change interior',
+        cost: e.target.dataset.cost,
+        isDefault,
+      },
+    })
+
+    setModel((prevState) => ({
+      ...prevState,
+      interior: { ...prevState.interior, title: value },
+    }))
   }
 
   return (
@@ -71,13 +140,7 @@ const Contructor = () => {
             oneChangeEngine={onChangeEngine}
             onChangeInterior={onChangeInterior}
           />
-          {(newColor || newEngine || newInterior) && (
-            <AdditionalCost
-              color={newColor}
-              engine={newEngine}
-              interior={newInterior}
-            />
-          )}
+          <AdditionalCost extra={extraOptions} basePrice={model.basePrice} />
         </div>
       </div>
     </div>

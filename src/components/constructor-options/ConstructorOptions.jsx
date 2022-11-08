@@ -9,8 +9,6 @@ const ConstructorOptions = ({
   oneChangeEngine,
   onChangeInterior,
 }) => {
-  const { color, engine, interior } = model
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.options}>

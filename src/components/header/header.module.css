@@ -64,7 +64,7 @@
 
 @media (max-width: 425px) {
   .contactBtn {
-    display: none;
+    display: none !important;
   }
 
   .callImg {

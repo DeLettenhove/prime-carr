@@ -18,7 +18,7 @@ const RadioGroup = ({ current, data, changeHandler, isColors }) => {
                   name={data.title}
                   value={item.value}
                   data-cost={item.cost}
-                  checked={item.value === current}
+                  checked={item.value === current?.title}
                   onChange={changeHandler}
                 />
                 {!isColors && (
