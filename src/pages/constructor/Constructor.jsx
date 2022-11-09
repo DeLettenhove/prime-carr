@@ -6,8 +6,14 @@ import ConstructorInfo from '../../components/constructor-info/ConstructorInfo'
 import ConstructorOptions from '../../components/constructor-options/ConstructorOptions'
 import AdditionalCost from '../../components/additional-cost/AdditionalCost'
 
-import { carsCatalog } from '../../data/mock-data'
+import { carsCatalog, carsImages } from '../../data/mock-data'
 import styles from './constructor.module.css'
+
+const changeImg = (color, model) => {
+  const car = carsImages.find((item) => item.name === model.name)
+  const image = car.colors[`${color}`]
+  return image
+}
 
 const extraReducer = (state, action) => {
   switch (action.type) {
@@ -36,9 +42,9 @@ const Contructor = () => {
 
   const getModel = (id) => {
     const car = carsCatalog.find((car) => car.id === parseInt(id))
-    const { color, engine, interior } = car
+    const { img, color, engine, interior } = car
     setModel(car)
-    setDefaultOptions({ color, engine, interior })
+    setDefaultOptions({ img, color, engine, interior })
     dispatchExtra({
       type: 'GET_DEFAULT',
       payload: { color, engine, interior },
@@ -53,6 +59,8 @@ const Contructor = () => {
     const value = e.target.value
     const isDefault = value === defaultOptions.color.title
 
+    const newImg = changeImg(value, model)
+
     dispatchExtra({
       type: 'REPAINT',
       payload: {
@@ -66,6 +74,7 @@ const Contructor = () => {
 
     setModel((prevState) => ({
       ...prevState,
+      img: newImg,
       color: { ...prevState.color, title: value },
     }))
   }
@@ -113,14 +122,14 @@ const Contructor = () => {
   }
 
   const resetHandler = () => {
+    const { color, engine, interior } = defaultOptions
+
     setModel((prev) => ({ ...prev, ...defaultOptions }))
     dispatchExtra({
       type: 'GET_DEFAULT',
-      payload: { ...defaultOptions },
+      payload: { color, engine, interior },
     })
   }
-
-  console.log(extraOptions)
 
   return (
     <div className="container">

@@ -1,6 +1,10 @@
-import porshe from '../assets/porshe.png'
-import toyota from '../assets/toyota.png'
-import miniCooper from '../assets/mini-cooper.png'
+// import porshe from '../assets/porshe.png'
+// import toyota from '../assets/toyota.png'
+// import miniCooper from '../assets/mini-cooper.png'
+
+import black from '../assets/black.png'
+import red from '../assets/red.png'
+import purple from '../assets/purple.png'
 
 export const menuItems = [
   {
@@ -129,12 +133,63 @@ export const footerInfo = [
   },
 ]
 
+export const carsImages = [
+  {
+    name: 'Porsche 718 Cayman S',
+    colors: {
+      black,
+      red,
+      purple,
+    },
+  },
+  {
+    name: 'Mini Cooper 5-DOOR',
+    colors: {
+      black,
+      red,
+      purple,
+    },
+  },
+  {
+    name: 'Toyota GR Supra',
+    colors: {
+      black,
+      red,
+      purple,
+    },
+  },
+  {
+    name: 'Porsche 911 Turbo',
+    colors: {
+      black,
+      red,
+      purple,
+    },
+  },
+  {
+    name: 'Porsche Taycan 4S',
+    colors: {
+      black,
+      red,
+      purple,
+    },
+  },
+  {
+    name: 'Mini Cooper WORKS...',
+    colors: {
+      black,
+      red,
+      purple,
+    },
+  },
+]
+
 export const carsCatalog = [
   {
     id: 0,
     name: 'Porsche 718 Cayman S',
     variant: 'Coupe',
-    img: porshe,
+    img: black,
     transmssion: 'Manual',
     places: 2,
     basePrice: 1000,
@@ -165,7 +220,7 @@ export const carsCatalog = [
     id: 1,
     name: 'Mini Cooper 5-DOOR',
     variant: 'Hatchback',
-    img: toyota,
+    img: red,
     transmssion: 'Matic',
     places: 4,
     basePrice: 800,
@@ -196,7 +251,7 @@ export const carsCatalog = [
     id: 2,
     name: 'Toyota GR Supra',
     variant: 'Coupe',
-    img: miniCooper,
+    img: red,
     transmssion: 'Manual',
     places: 2,
     basePrice: 700,
@@ -227,7 +282,7 @@ export const carsCatalog = [
     id: 3,
     name: 'Porsche 911 Turbo',
     variant: 'Coupe',
-    img: porshe,
+    img: purple,
     transmssion: 'Manual',
     places: 2,
     basePrice: 1100,
@@ -258,7 +313,7 @@ export const carsCatalog = [
     id: 4,
     name: 'Porsche Taycan 4S',
     variant: 'Coupe',
-    img: toyota,
+    img: purple,
     transmssion: 'Manual',
     places: 4,
     basePrice: 1200,
@@ -289,7 +344,7 @@ export const carsCatalog = [
     id: 5,
     name: 'Mini Cooper WORKS...',
     variant: 'Hatchback',
-    img: miniCooper,
+    img: black,
     transmssion: 'Matic',
     places: 2,
     basePrice: 900,
