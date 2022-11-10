@@ -1,17 +1,17 @@
-import styles from './welcome.module.css'
+import { useTranslation } from 'react-i18next'
 
+import styles from './welcome.module.css'
 import arrow from '../../assets/arrow.svg'
 
 const Welcome = () => {
+  const { t } = useTranslation()
+
   return (
     <div className={styles.box}>
-      <h1 className={styles.title}>More economy, same speed</h1>
-      <p className={styles.subtitle}>
-        The most beloved cars of the moment for those who want to ride in style
-        without spending too much
-      </p>
+      <h1 className={styles.title}>{t('welcome.title')}</h1>
+      <p className={styles.subtitle}>{t('welcome.subtitle')}</p>
       <button className="button">
-        Discover
+        {t('welcome.discoverBtn')}
         <img src={arrow} alt="Arrow" className={styles.arrow} />
       </button>
     </div>

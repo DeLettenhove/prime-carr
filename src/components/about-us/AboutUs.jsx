@@ -1,23 +1,23 @@
 import styles from './about-us.module.css'
 
-import { aboutUsContent } from '../../data/mock-data'
 import aboutImg from '../../assets/about-us.png'
-
-const aboutUsDescription = aboutUsContent.map((item) => {
-  return (
-    <p key={item.id} className={styles.description}>
-      {item.value}
-    </p>
-  )
-})
+import { useTranslation } from 'react-i18next'
 
 const AboutUs = () => {
+  const { t } = useTranslation()
+
   return (
-    <div id='about-us' className={styles.box}>
-      <h2 className={styles.title}>About us</h2>
+    <div id="about-us" className={styles.box}>
+      <h2 className={styles.title}>{t('aboutUs.title')}</h2>
       <div className={styles.aboutWrapper}>
-        <div className={styles.aboutContent}>{aboutUsDescription}</div>
-        <div><img src={aboutImg} alt="Sport car" className={styles.aboutImg} /></div>
+        <div className={styles.aboutContent}>
+          <p className={styles.description}>{t('aboutUs.description.part1')}</p>
+          <p className={styles.description}>{t('aboutUs.description.part2')}</p>
+          <p className={styles.description}>{t('aboutUs.description.part3')}</p>
+        </div>
+        <div>
+          <img src={aboutImg} alt="Sport car" className={styles.aboutImg} />
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,20 @@
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.infoTitle {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.infoLinks {
+  font-size: 12px;
+}

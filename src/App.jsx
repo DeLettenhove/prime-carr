@@ -6,12 +6,10 @@ import Constructor from './pages/constructor/Constructor'
 
 function App() {
   return (
-    // <Routes location="/cars/1">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/cars" element={<Cars />} />
       <Route path="/cars/:id" element={<Constructor />} />
-      {/* <Route path="/constructor" element={<Constructor />} /> */}
       <Route path="*" element={<h1>Not Found!!!</h1>} />
     </Routes>
   )

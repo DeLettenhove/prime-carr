@@ -1,0 +1,29 @@
+{
+  "location": {
+    "title": "Where are we",
+    "cities": [
+      "Georgia",
+      "Texas",
+      "Massachusetts",
+      "Virginia",
+      "Pensylvania",
+      "California",
+      "Colorado"
+    ]
+  },
+  "quickLinks": {
+    "title": "Quick links",
+    "links": ["About us", "Our services", "Contact us"]
+  },
+  "emailUs": {
+    "title": "Email us",
+    "emails": ["contact@primecar.com"]
+  },
+  "callUs": {
+    "title": "Call us",
+    "phones": ["+999-999-999", "+111-111-111"]
+  },
+  "policy": "Privacy policy",
+  "terms": "Terms and conditions",
+  "copyright": "Copyright © 2022 Prime Car. All Rights Reserved"
+}

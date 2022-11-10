@@ -4,8 +4,10 @@ import Card from '../card/Card'
 
 import styles from './catalog.module.css'
 import { carsCatalog } from '../../data/mock-data'
+import { useTranslation } from 'react-i18next'
 
 const Catalog = () => {
+  const { t } = useTranslation()
   const [cars, setCars] = useState([])
 
   useEffect(() => {
@@ -14,13 +16,13 @@ const Catalog = () => {
 
   return (
     <div className={styles.cards}>
-      {cars.map((item) => {
+      {cars.map((item, i) => {
         return (
           <Card
             key={item.id}
             id={item.id}
             name={item.name}
-            variant={item.variant}
+            variant={t(`card.${i}`)}
             img={item.img}
             places={item.places}
             transmssion={item.transmssion}

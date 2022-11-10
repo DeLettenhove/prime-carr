@@ -22,8 +22,37 @@
   list-style: none;
 }
 
+.actions {
+  display: flex;
+  column-gap: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.languageBtn {
+  border: none;
+  background-color: transparent;
+}
+
+.languageBtn:hover {
+  cursor: pointer;
+}
+
+.activeBtn {
+  border-bottom: 1px solid #fff;
+}
+
+.separator {
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+}
+
 .callImg {
-  display: none;
   width: 18px;
   height: 18px;
 }
@@ -48,6 +77,19 @@
   }
 }
 
+@media (max-width: 650px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+    order: 1;
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 575px) {
   .logo {
     max-width: 60px;
@@ -62,25 +104,9 @@
   }
 }
 
-@media (max-width: 425px) {
-  .contactBtn {
-    display: none !important;
-  }
-
-  .callImg {
-    display: block;
-  }
-}
-
-@media (max-width: 375px) {
-  .wrapper {
-    flex-wrap: wrap;
-  }
-
+@media (max-width: 475px) {
   .menu {
-    width: 100%;
     justify-content: space-between;
-    order: 1;
-    margin-top: 10px;
+    column-gap: 10px;
   }
 }

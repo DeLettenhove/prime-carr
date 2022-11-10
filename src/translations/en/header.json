@@ -1,0 +1,9 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "benefits": "Benefits",
+    "cars": "Cars"
+  },
+  "contactUs": "Contact us"
+}
