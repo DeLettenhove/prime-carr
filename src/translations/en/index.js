@@ -4,6 +4,7 @@ import aboutUs from './aboutUs.json'
 import footer from './footer.json'
 import carCard from './carCard.json'
 import constructor from './constructor.json'
+import notFound from './notFound.json'
 
 const en = {
   translations: {
@@ -13,6 +14,7 @@ const en = {
     footer,
     carCard,
     constructor,
+    notFound,
   },
 }
 
