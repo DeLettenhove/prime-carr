@@ -1,0 +1,10 @@
+{
+  "variant": {
+    "coupe": "Купе",
+    "hatchback": "Хетчбек"
+  },
+  "transmission": {
+    "manual": "Механічна",
+    "auto": "Автоматична"
+  }
+}

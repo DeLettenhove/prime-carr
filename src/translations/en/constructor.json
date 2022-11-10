@@ -1,0 +1,32 @@
+{
+  "sections": {    
+    "options": "Additional options",
+    "cost": "Cost"
+  },
+  "titles": {
+    "color": "Color",
+    "engine": "Engine",
+    "interior": "Interior"
+  },
+  "colors": {
+    "black": "black",
+    "red": "red",
+    "purple": "purple"
+  },
+  "engines": {
+    "4cyl": "4-Cyl 1.5 Liter",
+    "8cyl": "8-Cyl 3 Liter",
+    "16cyl": "16-Cyl 6 Liter"
+  },
+  "interiors": {
+    "leather": "Leather",
+    "suede": "Suede",
+    "leatherette": "Leatherette"
+  },
+  "actions": {
+    "color": "Repaint",
+    "engine": "Change engine",
+    "interior": "Change interior"
+  },
+  "price": "Total price"
+}

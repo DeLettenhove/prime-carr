@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { GiCancel } from 'react-icons/gi'
 
 import styles from './additional-cost.module.css'
@@ -7,6 +8,8 @@ const isVisible = (arr) => {
 }
 
 const AdditionalCost = ({ extra, basePrice, reset }) => {
+  const { t } = useTranslation()
+
   const extraCosts = Object.values(extra)
   const filteredCosts = extraCosts.filter((item) => !item.isDefault)
 
@@ -23,13 +26,13 @@ const AdditionalCost = ({ extra, basePrice, reset }) => {
     <>
       {isVisible(filteredCosts) && (
         <>
-          <h3 className={styles.title}>Cost</h3>
+          <h3 className={styles.title}>{t('constructor.sections.cost')}</h3>
           <div className={styles.box}>
             <ul className={styles.items}>
               {filteredCosts.map((item) => {
                 return (
                   <li key={item.id} className={styles.item}>
-                    <span className={styles.itemTitle}>{item.action}</span>
+                    <span className={styles.itemTitle}>{t(item.action)}</span>
                     {item.cost}
                   </li>
                 )
@@ -40,7 +43,7 @@ const AdditionalCost = ({ extra, basePrice, reset }) => {
         </>
       )}
       <div className={styles.price}>
-        Total cost: ${getTotal(basePrice, extraCosts)}
+        {t('constructor.price')}: ${getTotal(basePrice, extraCosts)}
       </div>
     </>
   )

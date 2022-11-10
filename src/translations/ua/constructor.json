@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "options": "Додаткові опції",
+    "cost": "Вартість"
+  },
+  "titles": {
+    "color": "колір",
+    "engine": "Двигун",
+    "interior": "Салон"
+  },
+  "colors": {
+    "black": "чорний",
+    "red": "червоний",
+    "purple": "фіолетовий"
+  },
+  "engines": {
+    "4cyl": "4-Cyl 1.5 літрa",
+    "8cyl": "8-Cyl 3 літрa",
+    "16cyl": "16-Cyl 6 літрa"
+  },
+  "interiors": {
+    "leather": "Шкіра",
+    "suede": "Замша",
+    "leatherette": "Шкірозамінник"
+  },
+  "actions": {
+    "color": "Перефарбування",
+    "engine": "Заміна двигуна",
+    "interior": "Заміна салону"
+  },
+  "price": "Загальна сума"
+}

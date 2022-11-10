@@ -1,14 +1,18 @@
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 import styles from './card.module.css'
 
 import personIcon from '../../assets/person.svg'
 import transmissionIcon from '../../assets/transmission.svg'
-import { Link } from 'react-router-dom'
 
 const Card = ({ id, name, variant, img, places, transmssion, price }) => {
+  const { t } = useTranslation()
+
   return (
     <Link to={`/cars/${id}`} className={styles.card}>
       <h4 className={styles.cardTitle}>{name}</h4>
-      <p className={styles.cardVariant}>{variant}</p>
+      <p className={styles.cardVariant}>{t(variant)}</p>
       <img className={styles.cardImg} src={img} alt="Car" />
       <div className={styles.cardInfoWrapper}>
         <div className={styles.cardInfoBox}>
@@ -21,7 +25,7 @@ const Card = ({ id, name, variant, img, places, transmssion, price }) => {
             src={transmissionIcon}
             alt="icon"
           />
-          <p className={styles.cardTransmission}>{transmssion}</p>
+          <p className={styles.cardTransmission}>{t(transmssion)}</p>
         </div>
         <p className={styles.cardPrice}>${price}</p>
       </div>

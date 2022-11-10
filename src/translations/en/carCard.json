@@ -1,0 +1,10 @@
+{
+  "variant": {
+    "coupe": "Coupe",
+    "hatchback": "Hatchback"
+  },
+  "transmission": {
+    "manual": "Manual",
+    "auto": "Automatic"
+  }
+}

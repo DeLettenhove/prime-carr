@@ -26,25 +26,20 @@
 
 @media (max-width: 768px) {
   .constructor {
-    column-gap: 40px;
-  }
-}
-
-@media (max-width: 650px) {
-  .constructor {
-    column-gap: 30px;
-  }
-}
-
-@media (max-width: 600px) {
-  .constructor {
     flex-direction: column;
+    row-gap: 20px;
     padding: 20px 30px;
   }
 
   .additional {
     border-left: none;
     border-top: 1px solid #fff;
+  }
+}
+
+@media (max-width: 600px) {
+  .constructor {
+    row-gap: 0;
   }
 }
 

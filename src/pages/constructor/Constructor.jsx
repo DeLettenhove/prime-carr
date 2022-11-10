@@ -65,7 +65,7 @@ const Contructor = () => {
       type: 'REPAINT',
       payload: {
         id: Date.now(),
-        action: 'Repaint',
+        action: 'constructor.actions.color',
         title: value,
         cost: e.target.dataset.cost,
         isDefault,
@@ -87,7 +87,7 @@ const Contructor = () => {
       type: 'CHANGE_ENGINE',
       payload: {
         id: Date.now(),
-        action: 'Change engine',
+        action: 'constructor.actions.engine',
         title: value,
         cost: e.target.dataset.cost,
         isDefault,
@@ -108,7 +108,7 @@ const Contructor = () => {
       type: 'CHANGE_INTERIOR',
       payload: {
         id: Date.now(),
-        action: 'Change interior',
+        action: 'constructor.actions.interior',
         title: value,
         cost: e.target.dataset.cost,
         isDefault,

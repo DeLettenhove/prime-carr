@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import RadioGroup from '../radio-group/RadioGroup'
 
 import styles from './constructor-options.module.css'
@@ -9,10 +10,12 @@ const ConstructorOptions = ({
   oneChangeEngine,
   onChangeInterior,
 }) => {
+  const { t } = useTranslation()
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.options}>
-        <h3 className={styles.title}>Additional options</h3>
+        <h3 className={styles.title}>{t('constructor.sections.options')}</h3>
         <RadioGroup
           current={model.color}
           changeHandler={onChangeColor}
