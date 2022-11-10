@@ -4,7 +4,7 @@ import resources from '../translations/index'
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'ua',
+  lng: 'en',
   ns: ['translations'],
 })
 
