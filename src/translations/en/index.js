@@ -7,7 +7,7 @@ import constructor from './constructor.json'
 import notFound from './notFound.json'
 
 const en = {
-  translations: {
+  translation: {
     header,
     welcome,
     aboutUs,

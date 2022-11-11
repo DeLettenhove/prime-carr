@@ -7,7 +7,7 @@ import constructor from './constructor.json'
 import notFound from './notFound.json'
 
 const ua = {
-  translations: {
+  translation: {
     header,
     welcome,
     aboutUs,
